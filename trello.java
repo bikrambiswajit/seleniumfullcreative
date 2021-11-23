@@ -5,6 +5,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.Select;
 
 public class trello {
 
@@ -54,7 +55,13 @@ public class trello {
 		
 		//logout
 		
-		driver.findElement(By.xpath("//button[@class='_2Twwgx1RZOAQRy js-open-header-member-menu a0_VCPbYTNd2WP _3TTqkG5muwOzqZ ZOUktZwsING7-0 _1Tu9wiuW4Te8Rx']")).click();
+		WebElement logt= driver.findElement(By.xpath("//button[@class='_2Twwgx1RZOAQRy js-open-header-member-menu a0_VCPbYTNd2WP _3TTqkG5muwOzqZ ZOUktZwsING7-0 _1Tu9wiuW4Te8Rx']"));
+		logt.click();
+		
+		//Select logout = new Select(logt);
+		//logout.selectByVisibleText("Log out");
+		
+		
 		//driver.findElement(By.xpath("//button[@class='_3Qtx4lodxp9J0E']")).click();
 		
 	}
